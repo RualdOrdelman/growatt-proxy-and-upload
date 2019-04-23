@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /home/ruald
+cd /home/ruald/growatt-proxy-and-upload
 
 while [ a = a ]
 do
