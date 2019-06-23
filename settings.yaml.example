@@ -1,0 +1,36 @@
+Proxy_allowd_ips: 
+    - 192.168.1.60
+    - 127.0.0.1
+    - 192.168.1.254
+    - 192.168.1.253
+    - 192.168.1.252
+GrowattServer_IP: 47.91.67.66
+GrowattServer_Port: 5279
+
+PVoutput_API_KEY: 057fb7f61311c010fcf28f040ab51f91a3ac4a68
+
+MQTT_server_IP: 192.168.1.60
+MQTT_server_port: 1883
+MQTT_server_username: mqttuser
+MQTT_server_password: Jhbck3jebvih3rv
+
+Inverter1_ID: BX25220014
+Inverter1_PVoutput_ID: 66629
+Inverter1_output_filename: Proxy_outputbuffer_schuindak_oost.txt
+Inverter1_last_etoday_filename: EToday_Schuindak_oost.txt
+Inverter1_pvoutput_buffer_filename: PVOutput_buffer_Schuindak_oost.txt
+Inverter1_mqtt_client_ID: schuindak_oost 
+
+Inverter2_ID: 5FZI850018
+Inverter1_PVoutput_ID: 67618
+Inverter2_output_filename: Proxy_outputbuffer_platdak_veranda.txt
+Inverter2_last_etoday_filename: EToday_Platdak_veranda.txt
+Inverter2_pvoutput_buffer_filename: PVOutput_buffer_Platdak_veranda.txt
+Inverter2_mqtt_client_ID: platdak_veranda
+
+Inverter3_ID: ZPC0840003
+Inverter1_PVoutput_ID: 67619
+Inverter3_output_filename: Proxy_outputbuffer_platdak_tuinhuis.txt
+Inverter3_last_etoday_filename: EToday_Platdak_tuinhuis.txt
+Inverter3_pvoutput_buffer_filename: PVOutput_buffer_Platdak_tuinhuis.txt
+Inverter3_mqtt_client_ID: platdak_tuinhuis
