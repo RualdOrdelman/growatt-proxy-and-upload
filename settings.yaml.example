@@ -7,12 +7,12 @@ Proxy_allowd_ips:
 GrowattServer_IP: 47.91.67.66
 GrowattServer_Port: 5279
 
-PVoutput_API_KEY: d32vfcefwfc0fc2rewceewc91a3ac4a132f
+PVoutput_API_KEY: KEY_HERE
 
 MQTT_server_IP: 192.168.1.1
 MQTT_server_port: 1883
-MQTT_server_username: mqttuser
-MQTT_server_password: ewvev3jebvew2f3v
+MQTT_server_username: USERNAME_HERE
+MQTT_server_password: PASSWORD_HERE
 
 Inverter1_ID: HJ146DDJDG
 Inverter1_PVoutput_ID: 11111
@@ -22,14 +22,14 @@ Inverter1_pvoutput_buffer_filename: PVOutput_buffer_Schuindak_oost.txt
 Inverter1_mqtt_client_ID: schuindak_oost 
 
 Inverter2_ID: 865GHF54D6
-Inverter1_PVoutput_ID: 11112
+Inverter2_PVoutput_ID: 11112
 Inverter2_output_filename: Proxy_outputbuffer_platdak_veranda.txt
 Inverter2_last_etoday_filename: EToday_Platdak_veranda.txt
 Inverter2_pvoutput_buffer_filename: PVOutput_buffer_Platdak_veranda.txt
 Inverter2_mqtt_client_ID: platdak_veranda
 
 Inverter3_ID: JH78IOP75F
-Inverter1_PVoutput_ID: 11114
+Inverter3_PVoutput_ID: 11114
 Inverter3_output_filename: Proxy_outputbuffer_platdak_tuinhuis.txt
 Inverter3_last_etoday_filename: EToday_Platdak_tuinhuis.txt
 Inverter3_pvoutput_buffer_filename: PVOutput_buffer_Platdak_tuinhuis.txt
