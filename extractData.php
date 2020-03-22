@@ -370,7 +370,7 @@
 			if (substr($buffer, 0, 1) == ';') $buffer = ltrim($buffer, ';');
 				file_put_contents($this->pvoutput_current_buffer_filename, $buffer);
 			//echo "1.4\n";
-			if (substr_count($buffer, ';') > 6) 
+			if (substr_count($buffer, ';') > 2)  //hier stond 6
 			{
 				if (substr_count($buffer, ';') > 30) 
 				{

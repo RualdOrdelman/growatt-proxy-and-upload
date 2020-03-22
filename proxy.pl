@@ -181,8 +181,9 @@ while (1) {
 		print ("Messagetype received: " , Hexify(\substr($buffer, 6, 2)), "\n"); 
 
 		if (substr($buffer, 6, 2) eq "\x01\x04" && length($buffer) > 100) {
+			#print(substr($buffer, 0, 25), "\n");
 			my $tempString = decryptMsg($buffer);
-			#print("Tempstring = ", $tempString, "\n");
+			#print(substr($tempString, 0, 25), "\n");
 			$incomming_inverterID = substr($tempString, 10, 10); #10th karakter in string, en 10 karaketers lang
 			save_to_file($buffer);
 		}
