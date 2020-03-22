@@ -6,6 +6,16 @@ Verkeer van de omvormer wordt verzonden door de Shine-s Wifi dongle in de omvorm
 2)Op de NUC draait ook een script run_upload die het extract.php script draait. Deze bekijkt of er buffer bestanden staan om verwerkt te worden. Op basis van de paramater kan ook dit script overweg met drie omvormers. Check even de constanten bovenin het script. Na het decrypten en parsen 
 upload het script de data naar PvOutput en daarna via MQTT. Via MQTT kunnen allerlei Domotica pakketten deze waardes oppakken. Zelf gebruik ik Home assistant die de waardes zichtbaar maakt voor mij. 
 
+## Installation
+Before the script can be executed you must install Perl module YAML::XS and Data::Hexify
+step1: cpan
+step2: install YAML::XS
+step3: install Data::Hexify
+
+Also be sure that PHP-cli is installed
+sudo apt-get install php7.2-cli
+sudo apt-get install -y php-yaml
+
 ### Settings
 
 Voor de instellingen van de Proxy en het uploadscript is Settings.yaml. Maak een kopie van settings.yaml.example en pas de waardes aan. 
