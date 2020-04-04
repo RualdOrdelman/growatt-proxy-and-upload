@@ -78,11 +78,11 @@
 				$result = (object) [];
 				$length = 10;
 				$result->deviceId = $this->getValue($msg, $start, $length);
-				$start += $length;
+				$start += $length + 20;
 
 				$length = 10;
 				$result->inverterId = $this->getValue($msg, $start, $length);
-				$start += $length;
+				$start += $length + 20;
 
 				$length = 5;
 				$result->empty = $this->getValue($msg, $start, $length);
