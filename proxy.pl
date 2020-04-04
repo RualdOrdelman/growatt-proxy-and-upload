@@ -24,7 +24,7 @@ my $config = LoadFile('settings.yaml');
 my @allowed_ips = ($config->{Proxy_allowd_ips}->[0], $config->{Proxy_allowd_ips}->[1],$config->{Proxy_allowd_ips}->[2],$config->{Proxy_allowd_ips}->[3],$config->{Proxy_allowd_ips}->[4]);
 
 my $debug = 1;
-my $incomming_inverterID = 0;
+my $incoming_inverterID = 0;
 my $inverter1_ID = $config->{Inverter1_ID}; 
 my $inverter2_ID = $config->{Inverter2_ID};
 my $inverter3_ID = $config->{Inverter3_ID};
@@ -100,12 +100,12 @@ sub client_allowed {
 
 sub save_to_file {
 	my $msg = shift;
-    	print "incomming_inverterID:", $incomming_inverterID, "\n";
+	print "incoming_inverterID:", $incoming_inverterID, "\n";
 
 	my $filename = '';
 
 	use feature qw(switch);
-	given($incomming_inverterID){
+	given($incoming_inverterID){
   		when($inverter1_ID) { $filename = $inverter1_output_filename; }
   		when($inverter2_ID) { $filename = $inverter2_output_filename; }
                 when($inverter3_ID) { $filename = $inverter3_output_filename; }
@@ -139,8 +139,8 @@ sub decryptMsg {
     	my $pos = 0;
 	
 	#for (my $i=0; $i <= length($msg); $i++) 
-	#Only first 20 karakters, that enough for the inverterID
-	for (my $i=0; $i <= 20; $i++)
+	#Only first 40 characters, that's enough for the inverterID
+	for (my $i=0; $i < 40; $i++)
 	{		
 		my $value = ord(substr($encryptionKey, $pos++, 1));
 		if ($pos +1 > length($encryptionKey)) 
@@ -184,7 +184,7 @@ while (1) {
 			#print(substr($buffer, 0, 25), "\n");
 			my $tempString = decryptMsg($buffer);
 			#print(substr($tempString, 0, 25), "\n");
-			$incomming_inverterID = substr($tempString, 10, 10); #10th karakter in string, en 10 karaketers lang
+			$incoming_inverterID = substr($tempString, 30, 10); #10th character in string, and 10 characters long
 			save_to_file($buffer);
 		}
 	
